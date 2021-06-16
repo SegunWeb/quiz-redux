@@ -1,0 +1,33 @@
+.done {
+    text-decoration: line-through;
+}
+.imp {
+    font-weight: bold;
+    color: red;
+}
+.mytext:hover {
+    font-weight: bold;
+}
+
+.success {
+    background-color: green;
+}
+.error {
+    background-color: darkred;
+}
+
+.backdrop {
+    z-index: 50;
+    background-color: rgba(0,0,0, .7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+.navi {
+    position: fixed;
+    z-index: 9999;
+    background-color: #fff;
+}
