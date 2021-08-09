@@ -1,8 +1,17 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Basic functionality without styling. Application for creating polls with four options for answering a question.
 
-## Available Scripts
+To create a new survey, you need to log in to the / auth page.
+You can create your own user or use a basic account
 
-In the project directory, you can run:
+email - tester@test.com
+pass  - qwer1234
+
+Working with forms with React Redux. Using firebase as a server
+
+https://quiztest-89aaf.firebaseapp.com/ 
+
+
+
 
 ### `npm start`
 
