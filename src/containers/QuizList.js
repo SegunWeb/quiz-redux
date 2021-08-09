@@ -12,32 +12,18 @@ class QuizList extends Component {
     componentDidMount() {
 
         this.props.fetchQuizes()
-
-        // try {
-        //     const res = await axios.get('/quizes.json')
-        //
-        //     const quizes = [];
-        //     Object.keys(res.data).forEach((key, index) => {
-        //         quizes.push({
-        //             id: key,
-        //             name: `test N${index + 1}`
-        //         })
-        //     })
-        //
-        //     this.setState({
-        //         quizes,
-        //         load: false
-        //     })
-        //
-        //
-        // }
-        // catch (e) {
-        //     console.log(e)
-        // }
     }
+
+
 
     render() {
         const {quizes, load} = this.props;
+
+
+        const arrQuiz = quizes ?
+            quizes.map((item, index) => {
+                    return <li className={'list-group-item'} key={index}><Link to={`/quiz/${item.id}`}>{item.name}</Link></li>
+                }) : <p>Список пуст</p>
 
         return (
             <>
@@ -46,9 +32,7 @@ class QuizList extends Component {
                         <span>loading...</span> :
 
                         <ul className={'list-group'}>
-                            {quizes.map((item, index) => {
-                                return <li className={'list-group-item'} key={index}><Link to={`/quiz/${item.id}`}>{item.name}</Link></li>
-                            })}
+                            {arrQuiz}
                         </ul>
                 }
             </>
@@ -59,7 +43,6 @@ class QuizList extends Component {
 const mapStateToProps = (state) => {
     return {
         quizes: state.quizList.quizes,
-
         load: state.quizList.load
     }
 };

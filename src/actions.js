@@ -13,7 +13,8 @@ export const fetchQuizes = () => {
     return async dispatch => {
         dispatch(fetchQuizesStart());
         try {
-            const res = await axios.get('/quizes.json');
+            const response = await axios.get('/quizes');
+            const res = response.json()
             const quizes = [];
 
             Object.keys(res.data).forEach((key, index) => {
