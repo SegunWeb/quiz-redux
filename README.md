@@ -8,7 +8,7 @@ pass  - qwer1234
 
 Working with forms with React Redux. Using firebase as a server
 
-https://quiztest-89aaf.firebaseapp.com/ 
+https://quiz-323113.firebaseapp.com/
 
 
 
