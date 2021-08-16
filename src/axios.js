@@ -2,6 +2,6 @@ import axios from "axios";
 
 export default axios.create({
 
-    baseURL: 'https://quiztest-89aaf-default-rtdb.firebaseio.com'
+    baseURL: 'https://quiz-323113-default-rtdb.firebaseio.com'
 
 })

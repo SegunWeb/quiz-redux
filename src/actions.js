@@ -13,7 +13,7 @@ export const fetchQuizes = () => {
     return async dispatch => {
         dispatch(fetchQuizesStart());
         try {
-            const response = await axios.get('/quizes');
+            const response = await axios.get('/quizes', {headers: {"Access-Control-Allow-Origin": "*"}});
             const res = response.json()
             const quizes = [];
 
@@ -189,9 +189,9 @@ export const auth = (email, password, isLogin) => {
             returnSecureToken: true
         };
 
-        let url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCrsORF0M6BZvGq2imXblHly4qqaRJr5Js';
+        let url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAHHZeudzEVDw06LxETAUZWB0-GxuL93Lw';
         if(isLogin) {
-            url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCrsORF0M6BZvGq2imXblHly4qqaRJr5Js'
+            url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAHHZeudzEVDw06LxETAUZWB0-GxuL93Lw'
         }
         const res = await axios.post(url, authData);
         const data = res.data;
