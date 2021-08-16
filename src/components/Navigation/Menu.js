@@ -2,6 +2,7 @@ import React from 'react';
 import Drawer from "./Drawer";
 import Backdrop from "./Backdrop";
 import {NavLink} from "react-router-dom";
+import '../../style.css'
 
 const Menu = ({open, handleMenu, isAuth}) => {
 
@@ -22,7 +23,7 @@ const Menu = ({open, handleMenu, isAuth}) => {
 
 
     return (
-        <div className={'p-4'}>
+        <div className={'p-4 head_wrap'}>
             <Backdrop handleMenu={handleMenu}  open={open}/>
             <div className={ 'navi px-4'}>
                 <Drawer open={open} handleMenu={handleMenu}/>
@@ -34,7 +35,6 @@ const Menu = ({open, handleMenu, isAuth}) => {
                     }
                 </ul>
             </div>
-
 
         </div>
     );

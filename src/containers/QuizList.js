@@ -23,7 +23,11 @@ class QuizList extends Component {
         const arrQuiz = quizes ?
             quizes.map((item, index) => {
                     return <li className={'list-group-item'} key={index}><Link to={`/quiz/${item.id}`}>{item.name}</Link></li>
-                }) : <p>Список пуст</p>
+                }) : <div className="alert alert-danger">
+                        <p>Список созданных опросов пуст</p>
+                        <p>Для создания опроса авторизируйтесь <Link to={'/auth'}>"перейти"</Link></p>
+
+                     </div>
 
         return (
             <>

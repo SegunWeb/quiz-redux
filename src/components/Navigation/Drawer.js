@@ -9,7 +9,7 @@ const Drawer = ({handleMenu, open}) => {
 
     return (
         <div onClick={handleMenu}>
-            <i className={style.join(' ')}/>
+            <i className={style.join(' ')}/> Menu
         </div>
     );
 };

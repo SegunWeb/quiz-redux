@@ -27,7 +27,17 @@
 
 }
 .navi {
-    position: fixed;
+    position: relative;
     z-index: 9999;
     background-color: #fff;
+    border-radius: 5px;
+    padding: 7px 0;
+
+}
+.head_wrap {
+    background: #9bc6ff;
+    margin-bottom: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
